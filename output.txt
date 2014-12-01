@@ -1,0 +1,8 @@
+States: S, A, C, B
+Terminals: a
+Start State: S
+Rules: 
+S: BA|a
+A: BC|BB
+C: BA
+B: a
