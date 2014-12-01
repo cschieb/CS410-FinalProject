@@ -14,7 +14,7 @@ public class ProgramTester {
 		Grammar parsedGrammar = null;
 		
 		try {
-			parsedGrammar = fileParser.parseGrammarFromFile("C:/Users/Colin/Documents/CS 410/Final Project/AnotherCFG.txt");
+			parsedGrammar = fileParser.parseGrammarFromFile("AnotherCFG.txt");
 		} catch (IOException e) {
 			System.out.println("File was not found, or there was an error reading it.");
 			e.printStackTrace();
