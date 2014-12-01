@@ -9,6 +9,7 @@ import com.cs410.finalproject.ioutils.GrammarWriter;
 import com.cs410.finalproject.models.Grammar;
 
 public class ProgramTester {
+	
 	public static void main (String[] args) {
 		Parser fileParser = new Parser();
 		Grammar parsedGrammar = null;
