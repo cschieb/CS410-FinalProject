@@ -1,12 +1,11 @@
 package com.cs410.finalproject.parsing;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cs410.finalproject.ioutils.GrammarReader;
 import com.cs410.finalproject.models.Grammar;
 import com.cs410.finalproject.models.State;
 
@@ -32,9 +31,7 @@ public class Parser {
 	public Grammar parseGrammarFromFile(String filePath) throws IOException {
 		//Create new Grammar and set up file to be read
 		parsedGrammar = new Grammar();
-		File toParse = new File(filePath);
-		FileReader fReader = new FileReader (toParse);
-		BufferedReader reader = new BufferedReader(fReader);
+		BufferedReader reader = (BufferedReader) GrammarReader.readFromFile(filePath);
 		
 		//Create boolean flag to indicate if the file is currently in the first few lines of parsing (The lines before the rules)
 		boolean initialSetup = true;
