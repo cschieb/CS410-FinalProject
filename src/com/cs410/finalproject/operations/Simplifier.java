@@ -233,7 +233,6 @@ public class Simplifier {
 							if(!productive.contains(state1.getNonTerminal())){
 								productive.add(state1.getNonTerminal());
 								int index=unproductive.indexOf(state1.getNonTerminal());
-								//System.out.println("index = "+ index);
 								unproductive.remove(index);
 								placeHolder=true;
 
@@ -285,9 +284,6 @@ public class Simplifier {
 				for(State check : cfg.getStates()){
 					if(check.getNonTerminal()==productiveState){
 						newStates.add(check);
-						//System.out.println();
-						//System.out.print("check.non= "+check.getNonTerminal());
-						//System.out.print("productiveState= "+productiveState);
 						}
 				
 				}
