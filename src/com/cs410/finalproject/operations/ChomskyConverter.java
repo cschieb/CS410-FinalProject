@@ -8,6 +8,7 @@ public class ChomskyConverter {
 
 	
 	/**
+	 * @author Matt
 	 * Splits all derivations of a grammar that are mixed (Mixed derivations contain one or more terminals AND nonterminals)
 	 * @param cfg the grammar to remove the mixed derivations from
 	 */
