@@ -7,6 +7,7 @@ import java.io.Writer;
 public class GrammarWriter {
 	
 	/**
+	 * @author Colin
 	 * Writes a grammar to the file location provided. If the file does not exist, it is created. If it does exist, it is overwritten.
 	 * @param filePath the path to the output location
 	 * @param grammarString the grammar, in string form, to be written to the file

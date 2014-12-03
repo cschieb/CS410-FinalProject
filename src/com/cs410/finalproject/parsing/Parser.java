@@ -1,4 +1,4 @@
-package com.cs410.finalproject.input;
+package com.cs410.finalproject.parsing;
 
 import java.io.BufferedReader;
 import java.io.File;

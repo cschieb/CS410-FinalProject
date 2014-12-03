@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.cs410.finalproject.operations.Simplifier;
 import com.cs410.finalproject.operations.ChomskyConverter;
-import com.cs410.finalproject.input.Parser;
+import com.cs410.finalproject.parsing.Parser;
 import com.cs410.finalproject.ioutils.GrammarWriter;
 import com.cs410.finalproject.models.Grammar;
 
