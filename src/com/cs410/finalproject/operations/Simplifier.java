@@ -9,6 +9,7 @@ import com.cs410.finalproject.models.State;
 public class Simplifier {
 
 	/**
+	 * @author Colin/Matt
 	 * Removes all epsilon derivations from a grammar, using the removeEps algorithm.
 	 * @param cfg the grammar whose epsilon derivations will be removed
 	 */
@@ -132,6 +133,7 @@ public class Simplifier {
 	}
 
 	/**
+	 * @author Colin
 	 * Removes all unit productions from a grammar (Unit productions are derivations whose right-hand sides contain 1 nonterminal)
 	 * @param cfg the grammar which will have its' unit productions removed
 	 */
@@ -174,6 +176,7 @@ public class Simplifier {
 	}
 
 	/**
+	 * @author Matt/Colin
 	 * Removes all of the unproductive and unreachable states from a grammar.
 	 * @param cfg the grammar which will have its' useless states removed
 	 */
@@ -230,7 +233,6 @@ public class Simplifier {
 							if(!productive.contains(state1.getNonTerminal())){
 								productive.add(state1.getNonTerminal());
 								int index=unproductive.indexOf(state1.getNonTerminal());
-								//System.out.println("index = "+ index);
 								unproductive.remove(index);
 								placeHolder=true;
 
@@ -282,9 +284,6 @@ public class Simplifier {
 				for(State check : cfg.getStates()){
 					if(check.getNonTerminal()==productiveState){
 						newStates.add(check);
-						//System.out.println();
-						//System.out.print("check.non= "+check.getNonTerminal());
-						//System.out.print("productiveState= "+productiveState);
 						}
 				
 				}
@@ -325,10 +324,8 @@ public class Simplifier {
 		
 		//set the new list of terminals. This is used because if we delete all derivations that contain a specific terminal
 		//call it 'x' (due to the possibility that derivation containing 'x' may always contain an unreachable state) ,
-		//then 'x' is considered unreachable. 
-		
-		//If the above case is true, we must delete this terminal 'x' from cfg's current list of terminal characters.
-		
+		//then 'x' is considered unreachable. 		
+		//If the above case is true, we must delete this terminal 'x' from cfg's current list of terminal characters.	
 		ArrayList<Character> newTerminals = new ArrayList<Character>();
 		for(State s : cfg.getStates()){
 			for(String deriv : s.getDerivations()){
@@ -343,7 +340,6 @@ public class Simplifier {
 			}
 		}
 		cfg.setTerminals(newTerminals);
-		
 	}
 	
 				

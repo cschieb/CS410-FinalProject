@@ -58,9 +58,6 @@ these features are as follows:
 
 1. Application of the CYK algorithm on a selected input string.
 
-2. Adding a class/method to handle file input, rather than hard-coding it into the test method.
-
-
 *Contributors please read*
 I will be creating working branches for each contributor to this project. If for some reason
 I forget to do this for you, please contact me and I will create one as soon as possible.
@@ -70,4 +67,5 @@ in a working state, and changes will only be made to it once the next feature of
 is fully functional.
 
 Thanks,
+
 Colin

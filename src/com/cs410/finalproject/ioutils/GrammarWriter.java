@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.io.Writer;
 
+/**
+ * @author Colin
+ *Class which contains the method responsible for writing the String form of a Grammar to a file.
+ */
 public class GrammarWriter {
 	
 	/**
