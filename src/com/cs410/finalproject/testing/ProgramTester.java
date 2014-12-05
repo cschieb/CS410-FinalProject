@@ -2,6 +2,7 @@ package com.cs410.finalproject.testing;
 
 import java.io.IOException;
 
+import com.cs410.finalproject.operations.CKYParser;
 import com.cs410.finalproject.operations.Simplifier;
 import com.cs410.finalproject.operations.ChomskyConverter;
 import com.cs410.finalproject.parsing.Parser;
@@ -23,7 +24,7 @@ public class ProgramTester {
 		
 		if (parsedGrammar != null) {
 			System.out.println(parsedGrammar.toString());
-			
+
 			Simplifier simplifier = new Simplifier();
 			ChomskyConverter converter = new ChomskyConverter();
 			Grammar simplifiedGrammar = simplifier.simplify(parsedGrammar);
@@ -32,6 +33,9 @@ public class ProgramTester {
 			System.out.println(chomskyNormalGrammar.toString());
 			
 			GrammarWriter.writeToFile("output.txt", chomskyNormalGrammar.toString());
+			
+			CKYParser stringInGrammar = new CKYParser();
+			stringInGrammar.parseCKY(chomskyNormalGrammar);
 		}
 		else {
 			System.out.println("The parsed Grammar was null, so execution of the program has ceased.");
